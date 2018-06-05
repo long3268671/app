@@ -1,0 +1,128 @@
+//切图数值转化
+$divide: 18;
+$ppr: 720px/$divide/1rem;
+$pprVal: 720/18;
+
+//颜色
+$mask:rgba(0,0,0,.6);
+$c-theme:#5e89ef;//主题色
+$c-bg:#f5f9ff;//背景色
+$c-help:#63D630;//辅助色
+$c-fbg:#fff;//白底色
+$c-hbg:#f1f1f1;//浅灰底色
+
+$line:#dcdcdc;//分割线
+$b-line:#000;//弹窗黑边框线
+
+$c-header : #fff; // 顶部导航标题文字
+$c-header-sec: #dde7fd;//导航副标题文字
+
+$c:#323232;//正文标题文字
+$c-light:#aaa;//正文文字
+$c-danger:#FF6507;//正文标注文字
+$c-tag: #5e89ef;//底部标签文字
+$c-gray: #555;//浅色文字
+$c-litgray: #ccc;//浅色文字
+$c-deepgray:#333;
+//字号
+$lg:34px/$ppr;
+$md:28px/$ppr;
+$lt:24px/$ppr;
+$xs:20px/$ppr;
+//高度
+$h-header:96px/$ppr;
+//宽度
+$w:24px/$ppr; //内容与边的距离
+$color:#2aabee;
+$fontCont: 30px/$ppr;
+$whiteC:#fff;
+$borderRadius:20px/$ppr;
+$fontEnPageT:26px/$ppr;
+$fontCm: #333;
+
+
+
+
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@function addRemUnit($val, $unit: px) {
+  @if $val !=0 {
+    $val: $val/$pprVal;
+    $val: $val + rem;
+  }
+  @return $val;
+}
+
+// clearfix
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: block;
+    height:0;
+    overflow: hidden;
+    clear: both;
+  }
+}
+
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+}
+
+
+
+@mixin arrTop($width:5px , $color:$border){
+  display: inline-block;
+  height:0px;
+  width:0px;
+  overflow:hidden;
+  border-width:$width;
+  vertical-align:bottom;
+  border-style:dashed dashed solid dashed;
+  border-color:transparent transparent $color transparent;
+}
+@mixin arrBottom($width:5px , $color:$border){
+  display: inline-block;
+  height:0px;
+  width:0px;
+  overflow:hidden;
+  border-width:$width;
+  vertical-align:bottom;
+  border-style:solid dashed dashed dashed;
+  border-color: $color transparent transparent transparent;
+}
+@mixin arrLeft($width:5px , $color:$border){
+  display: inline-block;
+  height:0px;
+  width:0px;
+  overflow:hidden;
+  border-width:$width;
+  vertical-align:bottom;
+  border-style:dashed solid dashed dashed;
+  border-color:transparent $color transparent transparent
+}
+@mixin arrRight($width:5px , $color:$border){
+  display: inline-block;
+  height:0px;
+  width:0px;
+  overflow:hidden;
+  border-width:$width;
+  vertical-align:bottom;
+  border-style:dashed dashed dashed solid;
+  border-color:transparent transparent transparent $color;
+}
