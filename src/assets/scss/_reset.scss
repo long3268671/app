@@ -2,9 +2,7 @@
 // reset
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,a,img,span,thead,tbody,tfoot{margin:0;padding:0;}
 html{font-size:40px;}
-body{font-family:Tahoma, Arial, Helvetica, STHeiti;
-  font-size:$md;color:$c;
-  background-color:$c-bg;}
+body{font-family:Tahoma, Arial, Helvetica, STHeiti;background-color: #f0f0f0;-webkit-font-smoothing:antialiased;}
 html{overflow-y:scroll}
 fieldset,img{border:0;}
 h1,h2,h3,h4,h5,h6{font-weight:normal;}
@@ -16,7 +14,7 @@ caption,th{text-align:left;}
 input,textarea,select,button{font-family:'Microsoft Yahei';font-size:inherit;*font-size:100%;font-weight:inherit;resize:none;}
 button{cursor:pointer;}
 :focus{outline:0;}
-a{text-decoration:none;color:$c-tag;}
+a{text-decoration:none;}
 a:hover{text-decoration:none;}
 .clearfix{@include clearfix;}
 img{max-width:100%}

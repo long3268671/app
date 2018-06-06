@@ -21,8 +21,8 @@ export default {
 }
 </script>
 
-<style type="text/scss">
-  /*@import "../assets/scss/base";*/
+<style scoped="scoped" type='text/css' lang="scss">
+  @import "../assets/scss/base";
   h1, h2 {
     font-weight: normal;
   }

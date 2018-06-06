@@ -3,46 +3,64 @@ $divide: 18;
 $ppr: 720px/$divide/1rem;
 $pprVal: 720/18;
 
-//颜色
-$mask:rgba(0,0,0,.6);
-$c-theme:#5e89ef;//主题色
-$c-bg:#f5f9ff;//背景色
-$c-help:#63D630;//辅助色
-$c-fbg:#fff;//白底色
-$c-hbg:#f1f1f1;//浅灰底色
+$btnGr: #6c2;
+$btnO: #ff7e45;
+$btnB: #2aabee;
+$btnR: #f96d6d;
+$btnY: #fcbd3d;
+$btnSpecial: #45ba46;
 
-$line:#dcdcdc;//分割线
-$b-line:#000;//弹窗黑边框线
-
-$c-header : #fff; // 顶部导航标题文字
-$c-header-sec: #dde7fd;//导航副标题文字
-
-$c:#323232;//正文标题文字
-$c-light:#aaa;//正文文字
-$c-danger:#FF6507;//正文标注文字
-$c-tag: #5e89ef;//底部标签文字
-$c-gray: #555;//浅色文字
-$c-litgray: #ccc;//浅色文字
-$c-deepgray:#333;
-//字号
-$lg:34px/$ppr;
-$md:28px/$ppr;
-$lt:24px/$ppr;
-$xs:20px/$ppr;
-//高度
-$h-header:96px/$ppr;
-//宽度
-$w:24px/$ppr; //内容与边的距离
-$color:#2aabee;
-$fontCont: 30px/$ppr;
-$whiteC:#fff;
-$borderRadius:20px/$ppr;
-$fontEnPageT:26px/$ppr;
 $fontCm: #333;
+$fontCs: #999;
+$bgC: #f0f0f0;
+$border:#e0e0e0;
+
+$fontHeader: 36px/$ppr;
+$fontTitle: 34px/$ppr;
+$fontCont: 30px/$ppr;
+$fontSupport: 24px/$ppr;
+$fontMin: 22px/$ppr;
 
 
 
+//以下三种暂时不使用
+$fontTrans: 28px/$ppr;
+$fontDate: 19px/$ppr;
+$fontEnPageT:26px/$ppr;
 
+
+$borderRadius:20px/$ppr;
+$whiteC: #ffffff;
+$blackC:#000;
+
+$gifFontC:#876916;
+$giftBg:#fffccc;
+$giftN:#a6de45;
+
+$inputC:#d0d0d0;
+
+//仅抽奖页面使用
+$luckyC:#2e1772;
+$luckyCr:#fe4e4e;
+$luckyCy:#fecb18;
+$luckyCg:#1bb7e8;
+
+$luckyCt:#ff8045;
+
+//英语
+$EnPageC:#fcf3eb;
+
+$enSyncProAllC:#d7f6c2;
+$enSyncProNowC:#ffef00;
+$audioBg:#f2eda3;
+$audioProAll:#fffcd2;
+
+$blankC:#626262;
+//math
+$color:#2aabee;
+$color_low:#76c8f5;
+$colorMaAll:#cdeafa;
+$border:#dcdcdc;
 
 @function strip-units($number) {
   @return $number / ($number * 0 + 1);
@@ -125,4 +143,30 @@ $fontCm: #333;
   vertical-align:bottom;
   border-style:dashed dashed dashed solid;
   border-color:transparent transparent transparent $color;
+}
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all .30s ease;
+  -webkit-transition: all .30s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.slide-fade-enter {
+  transform: translateX(200px);
+  -webkit-transform: translateX(200px);
+  opacity: 0;
+}
+
+
+.info_list {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: $bgC;
 }
