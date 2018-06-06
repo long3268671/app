@@ -10,7 +10,7 @@ const router = [
     require(['@/components/login/index.vue'], resolve);
   }
 },{
-  path:'/auth',
+  path:'/auth/:id',
   component:function(resolve){
     require(['@/components/login/auto.vue'],resolve);
   }
