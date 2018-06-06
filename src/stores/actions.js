@@ -15,7 +15,7 @@ export default {
           };
           commit('setUser', data);
       //   }
-      //   resolve();
+        resolve(data);
       // })
     })
   },

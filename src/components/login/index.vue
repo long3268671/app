@@ -19,7 +19,9 @@
       },
       methods:{
         UpdateUser(){
-          this.$store.dispatch('getInfo')
+          this.$store.dispatch('getInfo').then((data)=>{
+          console.log(data)
+          })
         },
         goAuth(){
           this.$router.push('/auth/'+this.id)
@@ -41,6 +43,6 @@
     }
 </script>
 
-<style scoped>
+<style scoped="scoped" type="text/css" lang="scss">
 
 </style>

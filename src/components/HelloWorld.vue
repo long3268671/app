@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <img src="../assets/logo.png">
+
   </div>
 </template>
 
@@ -17,6 +18,9 @@ export default {
     click(){
       layer.alert('点击')
     }
+  },
+  created(){
+    console.log(AAA)
   }
 }
 </script>
