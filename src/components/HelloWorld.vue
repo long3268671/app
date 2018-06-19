@@ -21,7 +21,7 @@ export default {
   },
   created(){
     console.log(AAA)
-    this.$http.get('/api/users/getUser',res=>{
+    this.$http.post('/api/users/getUser',{'uid':4},res=>{
       console.log(res)
     })
   }
