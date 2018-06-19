@@ -21,6 +21,9 @@ export default {
   },
   created(){
     console.log(AAA)
+    this.$http.get('/api/users/getUser',res=>{
+      console.log(res)
+    })
   }
 }
 </script>
