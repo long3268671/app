@@ -45,7 +45,8 @@
             console.log(res);
             this.list = res.data.list
           })
-        }
+        },
+        add(){}
       },
       computed:{
           user(){

@@ -7,6 +7,7 @@ process.env.NODE_ENV = 'production'
 const ora = require('ora')
 const rm = require('rimraf')
 const path = require('path')
+const fs = require('fs')
 const chalk = require('chalk')
 const webpack = require('webpack')
 const config = require('../config')
@@ -15,7 +16,30 @@ const webpackConfig = require('./webpack.prod.conf')
 const spinner = ora('building for production...')
 spinner.start()
 
+let components = [];
+
+const files = fs.readdirSync(config.build.assetsRoot)
+files.forEach(function (item, index) {
+    let stat = fs.lstatSync(config.build.assetsRoot + '/' + item)
+    if (stat.isDirectory() === true) {
+      components.push(item);
+    }
+
+})
+
+console.log(path.join(config.build.assetsRoot, config.build.assetsSubDirectory))
 rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
+
+  if(components.length>=5){
+    console.log(components)
+    var m = components[0].slice(1);
+    for(var i=1;i<components.length;i++){ //循环数组 判断整个数组的最小值
+      if(m > components[i].slice(1)) m = components[i].slice(1);
+    }
+    console.log(m)
+    rm(path.join(config.build.assetsRoot, 's' + m),err=>{})
+  }
+  console.log(components.length)
   if (err) throw err
   webpack(webpackConfig, (err, stats) => {
     spinner.stop()
