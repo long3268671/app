@@ -5,6 +5,10 @@ import App from './App'
 import store from  '../src/stores'
 import router from './router'
 import Axios from 'axios'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(ElementUI);
 Vue.config.productionTip = false
 // 全局接口中间件
 Vue.prototype.$http = Axios
@@ -12,7 +16,7 @@ Axios.interceptors.request.use(
   config => {
     let tbkt_token = localStorage.getItem("Tbkt-Token") || ''
     if(tbkt_token==""){
-      router.push("/login")
+      // router.push("/login")
     }
     if (tbkt_token) config.headers['Tbkt-Token'] = tbkt_token;
 

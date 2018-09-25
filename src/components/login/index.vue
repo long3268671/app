@@ -23,57 +23,58 @@
 </template>
 
 <script>
-    export default {
-        name: "index",
-      data(){
-          return {
-            list:[]
-          }
-      },
-      methods:{
-        UpdateUser(){
-          this.$store.dispatch('getInfo').then((data)=>{
-          console.log(data)
-          })
-        },
-        goAuth(){
-          this.$router.push('/auth/'+this.id)
-        },
-        update(){
-          let uid = document.getElementById('uid').value
-          this.$http.post('/api/users/getUser',{'uid':uid}).then(res=>{
-            console.log(res);
-            this.list = res.data.list
-          })
-        },
-        add(){}
-      },
-      computed:{
-          user(){
-            return this.$store.state.user
-          }
-      },
-      created(){
-          let data = {
-            name:'李梦龙',
-            age:27,
-            id:3514
-          }
-          this.$store.commit('setUser',data);
-          this.$http.get('/api/users/getAllUser').then(res=>{
-            console.log(res)
-            if(res.data.code == '200'){
-              this.list = this.list.concat(res.data.list)
-            }else {
-              layer.alert('请求出错')
-            }
-          })
+  export default {
+    name: "index",
+    data() {
+      return {
+        list: []
       }
+    },
+    methods: {
+      UpdateUser() {
+        this.$store.dispatch('getInfo').then((data) => {
+          console.log(data)
+        })
+      },
+      goAuth() {
+        this.$router.push('/auth/' + this.id)
+      },
+      update() {
+        let uid = document.getElementById('uid').value
+        this.$http.post('/api/users/getUser', {'uid': uid}).then(res => {
+          console.log(res);
+          this.list = res.data.list
+        })
+      },
+      add() {
+      }
+    },
+    computed: {
+      user() {
+        return this.$store.state.user
+      }
+    },
+    created() {
+      let data = {
+        name: '李梦龙',
+        age: 27,
+        id: 3514
+      }
+      this.$store.commit('setUser', data);
+      this.$http.get('/api/users/getAllUser').then(res => {
+        console.log(res)
+        if (res.data.code == '200') {
+          this.list = this.list.concat(res.data.list)
+        } else {
+          layer.alert('请求出错')
+        }
+      })
     }
+  }
 </script>
 
 <style scoped="scoped" type="text/css" lang="scss">
-  table{
+  table {
     margin: auto;
   }
 </style>
