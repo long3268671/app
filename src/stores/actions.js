@@ -1,5 +1,6 @@
 /**
- *
+ *  @Vuex的actions模块
+ *  调用方式 this.$store.dispatch(getInfo)
  * **/
 import Axios from 'axios'
 export default {

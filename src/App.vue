@@ -1,26 +1,115 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import ElAlert from "element-ui/packages/alert/src/main";
+  import ElAlert from "element-ui/packages/alert/src/main";
 
-export default {
-  components: {ElAlert},
-  name: 'App'
-}
+  export default {
+    components: {ElAlert},
+    name: 'App',
+    created(){
+
+    }
+  }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    border: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, a, img, span, thead, tbody, tfoot {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    padding: 0;
+    margin: 0
+  }
+
+  body {
+    font-family: Tahoma, Arial, Helvetica, STHeiti;
+    background-color: #f0f0f0;
+    -webkit-font-smoothing: antialiased;
+    border: 0;
+    padding: 0;
+    margin: 0
+  }
+
+  html {
+    overflow-y: scroll
+  }
+
+  fieldset, img {
+    border: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+  }
+
+  address, caption, cite, code, dfn, em, i, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  ol, ul, li {
+    list-style: none outside;
+  }
+
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  caption, th {
+    text-align: left;
+  }
+
+  input, textarea, select, button {
+    font-family: 'Microsoft Yahei';
+    font-size: inherit;
+    *font-size: 100%;
+    font-weight: inherit;
+    resize: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  :focus {
+    outline: 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .clearfix {
+  @include clearfix;
+  }
+
+  img {
+    max-width: 100%
+  }
 </style>

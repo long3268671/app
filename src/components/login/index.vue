@@ -37,7 +37,7 @@
         })
       },
       goAuth() {
-        this.$router.push('/auth/' + this.id)
+        this.$router.push('/auth/' + this.id+'?name='+123)
       },
       update() {
         let uid = document.getElementById('uid').value
@@ -47,6 +47,7 @@
         })
       },
       add() {
+
       }
     },
     computed: {
