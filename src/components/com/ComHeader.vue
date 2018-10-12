@@ -2,17 +2,17 @@
 <template>
     <div id="header">
       <el-row :gutter="20">
-        <el-col :span="8">
+        <el-col :span="3">
           <div class="grid-content bg-purple">
             Element+Vue 前端框架
           </div>
         </el-col>
-        <el-col :span="4" :offset="8">
+        <el-col :span="3" :offset="15">
           <div class="grid-content bg-purple">
             个人信息1
           </div>
         </el-col>
-        <el-col :span="4">
+        <el-col :span="3">
           <div class="grid-content bg-purple">
             个人信息2
           </div>
@@ -26,7 +26,6 @@
       name: "com-header",
         data() {
             return {
-                msg: 'Welcome to Your Vue.js App'
             }
         },
         conputed: {},

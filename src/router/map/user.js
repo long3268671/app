@@ -1,6 +1,6 @@
 import index from '@/components/index';
-import Userinfo from '@/components/User/info';
-import Userupdate from '@/components/User/update';
+import IndexInfo from '@/components/Index/info';
+import IndexUpdate from '@/components/Index/update';
 
 const router=[
   {
@@ -8,10 +8,10 @@ const router=[
     component:index,
     children:[{
       path:'',
-      component:Userinfo
+      component:IndexInfo
     },{
       path:'/update',
-      component:Userupdate
+      component:IndexUpdate
     }]
   }
 ]

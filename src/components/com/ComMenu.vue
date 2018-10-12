@@ -37,15 +37,8 @@
 </template>
 
 <script>
-    import ElMenu from "element-ui/packages/menu/src/menu";
-    import ElSubmenu from "element-ui/packages/menu/src/submenu";
-    import ElMenuItemGroup from "element-ui/packages/menu/src/menu-item-group";
 
     export default {
-      components: {
-        ElMenuItemGroup,
-        ElSubmenu,
-        ElMenu},
       name: "com-menu",
         data() {
             return {

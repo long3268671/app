@@ -5,10 +5,8 @@
 </template>
 
 <script>
-  import ElAlert from "element-ui/packages/alert/src/main";
 
   export default {
-    components: {ElAlert},
     name: 'App',
     created(){
 

@@ -27,21 +27,11 @@
 </template>
 
 <script>
-    import ElContainer from "element-ui/packages/container/src/main";
-    import ElHeader from "element-ui/packages/header/src/main";
-    import ElAside from "element-ui/packages/aside/src/main";
-    import ElMain from "element-ui/packages/main/src/main";
-    import ElFooter from "element-ui/packages/footer/src/main";
     import ComHeader from './com/ComHeader';
     import ComFoot from './com/ComFoot';
     import ComMenu from './com/ComMenu'
     export default {
       components: {
-        ElFooter,
-        ElMain,
-        ElAside,
-        ElHeader,
-        ElContainer,
         ComHeader,
         ComFoot,
         ComMenu
@@ -73,6 +63,7 @@
 </script>
 
 <style scoped="scoped" type='text/css' lang="scss">
+  @import "../assets/scss/base";
   .el-header{
     background-color: #B3C0D1;
     color: #333;
