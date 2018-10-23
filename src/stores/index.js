@@ -13,8 +13,13 @@ let state={
   //用户信息
   user:{
     name:'张三'
+  },
+  menuType:false,
+  rules : {
+
   }
 }
+
 export default new Vuex.Store({
   state,
   mutations,

@@ -6,4 +6,8 @@ export default {
   setUser(state,user){
     state.user = user
   },
+  setMenuType(state,type){
+    console.log(type)
+    state.menuType = type
+  }
 }

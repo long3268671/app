@@ -1,7 +1,7 @@
 <!--侧边导航栏-->
 <template>
   <div>
-    <el-menu :collapse="isCollapse" class="menu_list" default-active="1-1" @open="handleOpen" @close="handleClose" :unique-opened="true" :router="true">
+    <el-menu :collapse="isCollapse" class="menu_list" default-active="1-1" :collapse-transition="true" @open="handleOpen" @close="handleClose" :unique-opened="true" :router="true">
       <!--单独一个   没有下拉-->
       <el-menu-item index="1-1" route="/">
         <i class="el-icon-location"></i>
@@ -10,9 +10,9 @@
       <el-submenu index="2">
         <template slot="title">
           <i class="el-icon-menu"></i>
-          <span slot="title">导航二</span>
+          <span slot="title">基本操作</span>
         </template>
-        <el-menu-item index="2-1" route="update">选项1</el-menu-item>
+        <el-menu-item index="2-1" route="update">form表单</el-menu-item>
         <el-menu-item index="2-2">选项2</el-menu-item>
         <el-menu-item index="2-3">选项3</el-menu-item>
       </el-submenu>
@@ -42,10 +42,13 @@
       name: "com-menu",
         data() {
             return {
-              isCollapse: false
             }
         },
-        conputed: {},
+        computed: {
+          isCollapse:function () {
+            return this.$store.state.menuType
+          }
+        },
         methods: {
           handleOpen(key,keypath){
             console.log('开启 key:'+key+'keypath:'+keypath);

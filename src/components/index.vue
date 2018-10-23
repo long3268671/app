@@ -39,7 +39,7 @@
       name: "index",
         data() {
             return {
-                list:[]
+                list:[],
             }
         },
 
@@ -47,7 +47,8 @@
 
         },
         methods: {
-
+          changeMenuType(val){
+          }
         },
         created() {
           // this.$http.get('/api/users/getAllUser').then(res => {
@@ -62,7 +63,7 @@
     }
 </script>
 
-<style scoped="scoped" type='text/css' lang="scss">
+<style type='text/css' lang="scss">
   @import "../assets/scss/base";
   .el-header{
     background-color: #B3C0D1;
@@ -89,7 +90,6 @@
     background-color: #E9EEF3;
     color: #333;
     text-align: center;
-    line-height: 400px;
     height: calc(100vh - 120px);
   }
 
