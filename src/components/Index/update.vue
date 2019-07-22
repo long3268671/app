@@ -1,8 +1,8 @@
 <template>
   <div id="info">
     <el-breadcrumb separator="/">
-      <el-breadcrumb-item :to="{ path: '/update' }">form表单</el-breadcrumb-item>
-      <el-breadcrumb-item>demo</el-breadcrumb-item>
+      <el-breadcrumb-item>任务管理</el-breadcrumb-item>
+      <el-breadcrumb-item>创建任务</el-breadcrumb-item>
     </el-breadcrumb>
     <hr />
     <el-row :gutter="10" class="box">
@@ -135,7 +135,6 @@
       border-radius: 10px;
       padding: 20px 0;
       text-align: left;
-
     }
   }
 </style>

@@ -43,7 +43,7 @@
             }
         },
 
-        conputed: {
+        computed: {
 
         },
         methods: {

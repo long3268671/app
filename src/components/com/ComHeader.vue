@@ -17,8 +17,10 @@
           </div>
         </el-col>
         <el-col :span="3">
-          <div class="grid-content bg-purple">
-            个人信息2
+          <div class="grid-content bg-purple" @click="text">
+            <a href="javascript:;">
+              <span>个人信息2</span>
+            </a>
           </div>
         </el-col>
       </el-row>
@@ -40,6 +42,9 @@
         methods: {
           changeMenuType(){
             this.$store.commit('setMenuType',!this.menuType)
+          },
+          text(){
+            console.log('1111111111')
           }
         },
         created() {
